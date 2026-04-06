@@ -1,0 +1,110 @@
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+	"logo": {
+		"padding": {
+			"top": 1
+		}
+	},
+	"display": {
+		"separator": "", // Separator between keys and values
+		"key": {
+			"width": 30, // Aligns keys to this width
+			"type": "both" // string, icon, both, or none
+		}
+	},
+	"modules": [
+		"title",
+		{
+			"type": "separator",
+			"string": "=",
+			"times": 25
+		},
+		// os specs
+		"os",
+		"kernel",
+		"shell",
+		"terminal",
+		"locale",
+		{
+			"type": "separator",
+			"string": "-",
+			"times": 25
+		},
+		// hardware specs
+		"host",
+		{
+			"type": "cpu",
+			"showPeCoreCount": true,
+			"temp": true
+		},
+		{
+			"type": "gpu",
+			"driverSpecific": true,
+			"temp": true
+		},
+		"memory",
+		"swap",
+		{
+			"type": "disk",
+			"showExternal": true,
+			"showHidden": true,
+			"showSubvolumes": true,
+			"showReadOnly": true,
+			"showUnknown": true
+		},
+		{
+			"type": "separator",
+			"string": "-",
+			"times": 25
+		},
+		// external
+		"display",
+		"sound",
+		"camera",
+		"keyboard",
+		{
+			"type": "separator",
+			"string": "-",
+			"times": 25
+		},
+		"battery",
+		"poweradapter",
+		// network
+		{
+			"type": "localip",
+			"showIpv4": true,
+			"showIpv6": false,
+			"showMac": true,
+			"showLoop": true,
+			"showFlags": true,
+			"showAllIps": true
+		},
+		{
+			"type": "localip",
+			"showIpv4": false,
+			"showIpv6": true,
+			"showAllIps": true
+		},
+		{
+			"type": "publicip",
+			"timeout": 1000
+		},
+		{
+			"type": "dns",
+			"showType": "ipv4"
+		},
+		"wifi",
+		{
+			"type": "bluetooth",
+			"showDisconnected": false
+		},
+		{
+			"type": "separator",
+			"string": "-",
+			"times": 25
+		},
+		// other
+		"packages",
+		"uptime"
+	]
+}
