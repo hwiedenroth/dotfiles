@@ -16,7 +16,6 @@
 -- Create your files separately and then require them like this:
 -- require("myColors")
 
-
 ------------------
 ---- MONITORS ----
 ------------------
@@ -38,6 +37,9 @@ hl.monitor({
 local terminal    = "ghostty"
 local fileManager = "nautilus"
 local menu = "hyprlauncher"
+local colors = require('themes.catppuccin-mocha')
+local accent = colors.lavender
+local accentAlpha = 'rgba(' .. colors.lavenderAlpha .. 'ee)'
 
 
 -------------------
@@ -52,9 +54,8 @@ local menu = "hyprlauncher"
 hl.on("hyprland.start", function () 
 --   hl.exec_cmd(terminal)
 --   hl.exec_cmd("nm-applet")
---   hl.exec_cmd("waybar & hyprpaper & firefox")
+--   hl.exec_cmd("hyprpaper & firefox")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
---    hl.exec_cmd("waybar")
 end)
 
 
@@ -102,8 +103,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
+            active_border   = accent,
+            inactive_border = accentAlpha,
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -216,8 +217,8 @@ hl.config({
 
 hl.config({
     misc = {
-        force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
+        force_default_wallpaper = 1,     -- Set to 0 or 1 to disable the anime mascot wallpapers
+        disable_hyprland_logo   = true,  -- If true disables the random hyprland logo / anime girl background. :(
     },
 })
 
@@ -229,8 +230,8 @@ hl.config({
 hl.config({
     input = {
         kb_layout  = "us",
-        kb_variant = "",
-        kb_model   = "",
+        kb_variant = "altgr-intl",
+        kb_model   = "pc104",
         kb_options = "",
         kb_rules   = "",
 
