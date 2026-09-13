@@ -111,7 +111,7 @@ menuitem {
 }
 
 #keyboard-state>label.locked {
-    background: @yellow;
+    color: @yellow;
 }
 
 #privacy {

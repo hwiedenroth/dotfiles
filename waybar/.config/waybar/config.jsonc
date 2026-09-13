@@ -130,7 +130,10 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d}",
+        "calendar": {
+            "first-day-of-week": 1
+        }
     },
     "custom/weather": {
         "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Hannover+Germany",
@@ -140,9 +143,11 @@
         "interval": 3600
     },
     "keyboard-state": {
-        "numlock": true,
+        "device-path": "/dev/input/by-id/usb-Telink_Wireless_Gaming_Keyboard-event-kbd",
+        "numlock": false,
         "capslock": true,
-        "format": "{name} {icon}",
+        "scrolllock": false,
+        "format": "{icon}",
         "format-icons": {
             "locked": "",
             "unlocked": ""
