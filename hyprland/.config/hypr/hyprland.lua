@@ -54,8 +54,8 @@ local accentAlpha = 'rgba(' .. colors.lavenderAlpha .. 'ee)'
 hl.on("hyprland.start", function () 
 --   hl.exec_cmd(terminal)
 --   hl.exec_cmd("nm-applet")
---   hl.exec_cmd("hyprpaper & firefox")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
+    hl.exec_cmd("hyprpaper")
 end)
 
 
