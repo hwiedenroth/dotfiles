@@ -36,7 +36,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal    = "ghostty"
 local fileManager = "nautilus"
-local menu = "hyprlauncher"
+local menu = "quickshell ipc call launcher toggle"
 local colors = require('themes.catppuccin-frappe')
 local accent = colors.lavender
 local accentAlpha = 'rgba(' .. colors.lavenderAlpha .. 'ee)'
